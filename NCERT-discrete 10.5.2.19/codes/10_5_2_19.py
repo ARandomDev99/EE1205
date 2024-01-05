@@ -18,4 +18,4 @@ plt.ylabel("x(n)")
 plt.title("$x(n) = 4800 + 200n$")
 
 # Save x(n) vs n graph
-plt.savefig("../plots/10_5_2_19.png")
+plt.savefig("../figs/10_5_2_19.png")
