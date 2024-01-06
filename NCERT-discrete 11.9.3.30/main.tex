@@ -61,6 +61,24 @@
 \textbf{Question 11.9.3.30:} The number of bacteria in a certain culture doubles every hour. If there were 30 bacteria present in the culture originally, how many bacteria will be present at the end of $2^{nd}$ hour $4^{th}$ hour and $n^{th}$ hour?
 \\
 \solution
+
+\begin{table}[h!]
+    \centering
+    \caption{Input Parameters}
+    \label{tab:1}
+    \begin{tabular}{ | c | c | c | }
+        \hline
+        Parameter & In terms of x(n) & Value \\
+        \hline
+        Initial number of bacteria ($a_0$) & x(0) & 30 \\
+        &&\\
+        Ratio of bacteria at the end of the & & \\
+        hour to the start of the hour ($r$) & $x(n)/x(n - 1)$ & 2 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
 \begin{enumerate}
 \item
 Let number of bacteria initially be $a_0$ = 30
@@ -81,7 +99,7 @@ Therefore, number of bacteria at the end of the $2^{nd}$ hour is 120, $4^{th}$ h
 The series is a geometric progression.
 \[x(n) = x(0) (r^{n})\]
 where $r$ is the common ratio.\\
-From the solution, $x(0) = 30$, $r = 2$.
+It is given that $x(0) = 30$, $r = 2$ (see table \ref{tab:1}).
 \[\implies x(n) = 30(2^n)(u(n))\]
 as $x(n) = 0 \forall n < 0$.
 
@@ -101,14 +119,14 @@ Let Z-transform of $x(n)$ be $X(z)$.
 \begin{enumerate}
 \item If $|z| > 2$:
 \[X(z) = \frac{30}{1 - \frac{2}{z}}\]
-\[X(z) = 30z(z - 2)^{-1}\]
+\[X(z) = \frac{30z}{z - 2}\]
 
 \item If $|z| \le 2$:
 \[X(z) \to \infty\]
 
 \end{enumerate}
 
-Region of Convergence (ROC) of $z$ is $|z| > 2$.
+\[\implies X(z) = \frac{30z}{z - 2} \forall |z| > 2\]
 
 \end{enumerate}
 \end{document}
