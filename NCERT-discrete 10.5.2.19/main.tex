@@ -62,6 +62,19 @@
 \\
 \solution
 \begin{enumerate}
+\begin{table}[h!]
+    \centering
+    \caption{Input Parameters}
+    \label{tab:1}
+    \begin{tabular}{ | c | c | c | }
+        \hline
+        Parameter & In terms of x(n) & Value \\
+        \hline
+        Initial Salary ($a_0$) & $x(0)$ & 5000 \\
+        Annual Increment ($d$) & $x(n) - x(n - 1)$ & 200 \\
+        \hline
+    \end{tabular}
+\end{table}
 \item
 Let Subba Rao's initial salary $a_0$ = Rs. 5000
 \\
@@ -83,7 +96,7 @@ The series is an arithmetic progression.
 \[x(n) = x(0) + nd\]
 where $d$ is the common difference.
 
-It is given that initial value $x(0)$ is 5000 and common difference $d$ is 200.
+It is given that initial value $x(0)$ is 5000 and common difference $d$ is 200 (see table \ref{tab:1}).
 \[\implies x(n) = (5000 + 200n)(u(n))\]
 as $x(n) = 0 \forall n < 0$.
 
@@ -102,9 +115,7 @@ Using differentiation in Z-domain property,\\Z-transform of $nx(n) = -z\frac{d}{
 \[\implies X(z) = 5000U(z) + 200(-z)\frac{d}{dz} U(z)\]
 \[X(z) = \frac{5000}{1 - z^{-1}} + 200(-z)(-\frac{1}{z^2(1-z^{^-1})^2})\]
 \[X(z) = 5000(1 - z^{-1})^{-1} + 200\frac{z}{(z - 1)^2}\]
-\[X(z) = 5000z(z - 1)^{-1} + 200z(z - 1)^{-2}\]
-
-Region of Convergence (ROC) of $z$ is $|z| > 1$.
+\[X(z) = \frac{5000z}{z - 1} + \frac{200z}{(z - 1)^2} \forall |z| > 1\]
 
 \end{enumerate}
 \end{document}
