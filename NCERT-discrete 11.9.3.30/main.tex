@@ -68,40 +68,31 @@
     \label{tab:1}
     \begin{tabular}{ | c | c | c | }
         \hline
-        Parameter & In terms of x(n) & Value \\
+        Parameter & Value & Description \\
         \hline
-        Initial number of bacteria ($a_0$) & x(0) & 30 \\
-        &&\\
-        Ratio of bacteria at the end of the & & \\
-        hour to the start of the hour ($r$) & $x(n)/x(n - 1)$ & 2 \\
+        $x(0)$ & 30 & Initial no. of bacteria\\
+        $x(n)/x(n - 1)$ & 2 & Ratio of no. of bacteria at end \\
+        & & of hour to start of hour \\
         \hline
     \end{tabular}
 \end{table}
 
-
 \begin{enumerate}
-\item
-Let number of bacteria initially be $a_0$ = 30
-\\
-Let number of bacteria at the end of $n^{th}$ hour be $a_n$.
-\\
-Since number of bacteria doubles every hour, \[a_n = 2a_{n - 1}\]
-\[a_n = 2(2a_{n - 2})\]
-\[\dots\]
-\[a_n = 2^na_0 = 2^n(30)\]
-$\implies a_2 = 2^2(30) = 120$ and $a_4 = 2^4(30) = 480$
-\\
-
-Therefore, number of bacteria at the end of the $2^{nd}$ hour is 120, $4^{th}$ hour is 480, and $n^{th}$ hour is $30(2^n)$.
-
 \item \textbf{Finding $x(n)$}
-
-The series is a geometric progression.
-\[x(n) = x(0) (r^{n})\]
-where $r$ is the common ratio.\\
-It is given that $x(0) = 30$, $r = 2$ (see table \ref{tab:1}).
-\[\implies x(n) = 30(2^n)(u(n))\]
-as $x(n) = 0 \forall n < 0$.
+\\
+Let number of bacteria initially be $x(0)$ = 30
+\\
+Let number of bacteria at the end of $n^{th}$ hour be $x(n)$.
+\\
+Since number of bacteria doubles every hour,
+\begin{align}
+x(n) &= 2x(n - 1) \\
+&= 2(2x(n - 2)) \\
+&\nonumber{\dots} \\
+x(n) &= 2^nx(0) \\
+\implies x(n) &= 30(2^n)
+\end{align}
+Therefore, number of bacteria at the end of the $2^{nd}$ hour is 120, $4^{th}$ hour is 480, and $n^{th}$ hour is $30(2^n)$.
 
 \begin{figure}[h!]
     \centering
@@ -112,21 +103,29 @@ as $x(n) = 0 \forall n < 0$.
 \item \textbf{Z-transform of $x(n)$}
 
 Let Z-transform of $x(n)$ be $X(z)$.
-\[X(z) = \sum_{n = -\infty}^{\infty} x(n)u(n)z^{-n}\]
-\[X(z) = \sum_{n = 0}^{\infty} (30)(2^n)(z^{-n})\]
-\[X(z) = 30\lim_{n\to\infty}\sum_{i = 0}^{n}(\frac{2}{z})^i\]
+\begin{align}
+X(z) &= \sum_{n = -\infty}^{\infty} x(n)u(n)z^{-n} \\
+X(z) &= \sum_{n = 0}^{\infty} (30)(2^n)(z^{-n}) \\
+X(z) &= 30\lim_{n\to\infty}\sum_{i = 0}^{n}(\frac{2}{z})^i
+\end{align}
 
 \begin{enumerate}
 \item If $|z| > 2$:
-\[X(z) = \frac{30}{1 - \frac{2}{z}}\]
-\[X(z) = \frac{30z}{z - 2}\]
+\begin{align}
+X(z) &= \frac{30}{1 - \frac{2}{z}} \\
+X(z) &= \frac{30z}{z - 2}
+\end{align}
 
 \item If $|z| \le 2$:
-\[X(z) \to \infty\]
+\begin{align}
+X(z) \to \infty
+\end{align}
 
 \end{enumerate}
 
-\[\implies X(z) = \frac{30z}{z - 2} \forall |z| > 2\]
+\begin{align}
+\implies X(z) = \frac{30z}{z - 2} \forall |z| > 2
+\end{align}
 
 \end{enumerate}
 \end{document}
