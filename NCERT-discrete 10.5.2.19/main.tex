@@ -68,23 +68,24 @@
     \label{tab:1}
     \begin{tabular}{ | c | c | c | }
         \hline
-        Parameter & In terms of x(n) & Value \\
+        Parameter & Value & Description \\
         \hline
-        Initial Salary ($a_0$) & $x(0)$ & 5000 \\
-        Annual Increment ($d$) & $x(n) - x(n - 1)$ & 200 \\
+        $x(0)$ & 5000 & Initial Income \\
+        $x(n) - x(n - 1)$ & 200 & Annual Increment\\
         \hline
     \end{tabular}
 \end{table}
 \item
-Let Subba Rao's initial salary $a_0$ = Rs. 5000
+Let Subba Rao's initial salary $x(0)$ = Rs. 5000
 \\
 Let Subba Rao's increment $d$ = Rs. 200
 \\
-Subba Rao's salary after n years = $a_n$ = $a_0 + (n - 1)d$
-\\
-\[7000 = 5000 + (n - 1)(200)\]
-\[2000 = (n - 1)(200)\]
-\[n = 11\]
+Subba Rao's salary after n years = $x(n) = x(0) + nd$
+\begin{align}
+7000 &= 5000 + (n - 1)(200) \\
+2000 &= (n - 1)(200) \\
+n &= 11
+\end{align}
 
 $\implies$Subba Rao's income reaches Rs. 7000 eleven years after he started working.
 
@@ -93,11 +94,15 @@ Therefore, Subba Rao's income reached Rs. 7000 in the year 2006.
 \item \textbf{Finding $x(n)$}
 
 The series is an arithmetic progression.
-\[x(n) = x(0) + nd\]
+\begin{align}
+x(n) = x(0) + nd
+\end{align}
 where $d$ is the common difference.
 
 It is given that initial value $x(0)$ is 5000 and common difference $d$ is 200 (see table \ref{tab:1}).
-\[\implies x(n) = (5000 + 200n)(u(n))\]
+\begin{align}
+\implies x(n) = (5000 + 200n)(u(n))
+\end{align}
 as $x(n) = 0 \forall n < 0$.
 
 \begin{figure}[h!]
@@ -109,13 +114,17 @@ as $x(n) = 0 \forall n < 0$.
 
 Let Z-transform of $x(n)$ be $X(z)$. Let U(z) be the Z-transform of $u(n)$.
 
-\[X(z) = \sum_{n = -\infty}^{\infty} (5000 + 200n)(u(n))(z^{-n})\]
-\[X(z) = 5000\sum_{n = -\infty}^{\infty} u(n)(z^{-n}) + 200\sum_{n = -\infty}^{\infty}n(u(n))(z^{-n})\]
+\begin{align}
+X(z) &= \sum_{n = -\infty}^{\infty} (5000 + 200n)(u(n))(z^{-n}) \\
+X(z) &= 5000\sum_{n = -\infty}^{\infty} u(n)(z^{-n}) + 200\sum_{n = -\infty}^{\infty}n(u(n))(z^{-n})
+\end{align}
 Using differentiation in Z-domain property,\\Z-transform of $nx(n) = -z\frac{d}{dz}X(z)$
-\[\implies X(z) = 5000U(z) + 200(-z)\frac{d}{dz} U(z)\]
-\[X(z) = \frac{5000}{1 - z^{-1}} + 200(-z)(-\frac{1}{z^2(1-z^{^-1})^2})\]
-\[X(z) = 5000(1 - z^{-1})^{-1} + 200\frac{z}{(z - 1)^2}\]
-\[X(z) = \frac{5000z}{z - 1} + \frac{200z}{(z - 1)^2} \forall |z| > 1\]
+\begin{align}
+X(z) &= 5000U(z) + 200(-z)\frac{d}{dz} U(z) \\
+&= \frac{5000}{1 - z^{-1}} + 200(-z)(-\frac{1}{z^2(1 -z^{^-1})^2}) \\
+&= 5000(1 - z^{-1})^{-1} + 200\frac{z}{(z - 1)^2} \\
+X(z) &= \frac{5000z}{z - 1} + \frac{200z}{(z - 1)^2} \forall |z| > 1
+\end{align}
 
 \end{enumerate}
 \end{document}

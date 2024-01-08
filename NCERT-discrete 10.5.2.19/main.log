@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.3)  6 JAN 2024 17:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.3)  8 JAN 2024 10:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1257,25 +1257,18 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 (c:/texlive/2023/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 79--85
-
- []
-
 <figs/10_5_2_19.png, id=8, 462.528pt x 346.896pt>
 File: figs/10_5_2_19.png Graphic file (type png)
 <use figs/10_5_2_19.png>
-Package pdftex.def Info: figs/10_5_2_19.png  used on input line 105.
+Package pdftex.def Info: figs/10_5_2_19.png  used on input line 110.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (5.22238pt too wide) detected at line 113
-\OML/txmi/m/it/12 X\OT1/txr/m/n/12 (\OML/txmi/m/it/12 z\OT1/txr/m/n/12 ) = 5000
- [] \OML/txmi/m/it/12 u\OT1/txr/m/n/12 (\OML/txmi/m/it/12 n\OT1/txr/m/n/12 )(\O
-ML/txmi/m/it/12 z[]\OT1/txr/m/n/12 ) + 200 [] \OML/txmi/m/it/12 n\OT1/txr/m/n/1
-2 (\OML/txmi/m/it/12 u\OT1/txr/m/n/12 (\OML/txmi/m/it/12 n\OT1/txr/m/n/12 ))(\O
-ML/txmi/m/it/12 z[]\OT1/txr/m/n/12 )
+Overfull \hbox (10.55563pt too wide) detected at line 120
+[]
  []
 
 [1{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/202
@@ -1292,11 +1285,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30293 strings out of 474175
- 592841 string characters out of 5749699
- 1941460 words of memory out of 5000000
+ 30302 strings out of 474175
+ 592956 string characters out of 5749699
+ 1950460 words of memory out of 5000000
  51930 multiletter control sequences out of 15000+600000
- 636240 words of font info for 208 fonts, out of 8000000 for 9000
+ 634924 words of font info for 206 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,9n,103p,1172b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/texlive/
@@ -1307,10 +1300,10 @@ xsy.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texliv
 e/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/
 fonts/type1/urw/times/utmri8a.pfb>
 Output written on "C:/Users/anisu/Music/EE1205/NCERT-discrete 10.5.2.19/main.pd
-f" (1 page, 64047 bytes).
+f" (1 page, 64217 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
+ 79 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
