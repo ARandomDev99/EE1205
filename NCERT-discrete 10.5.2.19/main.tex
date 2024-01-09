@@ -76,48 +76,38 @@
         $x(n)$ & $x(0) + nd$ & $n^{th}$ term of the AP \\
         \hline
     \end{tabular}
-\end{table}
+\end{table} \\
+From the values given in \tabref{tab:1}:
 \begin{align}
 7000 &= 5000 + (n - 1)(200) \\
-2000 &= (n - 1)(200) \\
-n &= 11
+\implies 2000 &= (n - 1)(200) \\
+\therefore n &= 11
 \end{align}
-
 \begin{enumerate}
-\item Finding $x(n)$
-
+\item Finding $x(n)$ \\
 The series is an arithmetic progression.
 \begin{align}
-x(n) = x(0) + nd
+x(n) = (x(0) + nd)(u(n))
 \end{align}
-
-From \tabref{tab:1}:
-\begin{align}
-x(n) = (5000 + 200n)(u(n))
-\end{align}
-as $x(n) = 0 \forall n < 0$.
-
+as $x(n) = 0 \quad \forall \quad n < 0$.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\columnwidth]{figs/10_5_2_19.png}
-    \caption{Plot of $x(n)$ vs $n$}
+    \caption{Plot of $x(n)$ vs $n$; Refer to \tabref{tab:1} for values of $x(0)$ and $d$}
     \label{fig:1}
 \end{figure}
-
 \item Z-transform of $x(n)$ \\
-Let Z-transform of $x(n)$ be $X(z)$. Let U(z) be the Z-transform of $u(n)$.
+Let Z-transform of $x(n)$ be $X(z)$. Let $U(z)$ be the Z-transform of $u(n)$.
 \begin{align}
-X(z) &= \sum_{n = -\infty}^{\infty} (5000 + 200n)(u(n))(z^{-n}) \\
-X(z) &= 5000\sum_{n = -\infty}^{\infty} u(n)(z^{-n}) + 200\sum_{n = -\infty}^{\infty}n(u(n))(z^{-n})
+X(z) &= \sum_{n = -\infty}^{\infty} (x(0) + nd)(u(n))(z^{-n}) \\
+&= (x(0))(U(z)) + d\sum_{n = 0}^{\infty}nz^{-n} \\
+&= (x(0))(U(z)) + d(\frac{z^{-1}}{(1 - z^{-1})^2}) \\
+&= (x(0))(U(z)) + d(\frac{z}{(z - 1)^2}) \\
+&= \frac{x(0)(z)}{z - 1} + \frac{dz}{(z - 1)^2} \quad \forall \quad |z| > 1
 \end{align}
-Using differentiation in Z-domain property,
+Using the values from \tabref{tab:1}:
 \begin{align}
-Z\{nx(n)\} &= -z\frac{d}{dz}X(z) \\
-X(z) &= 5000U(z) + 200(-z)\frac{d}{dz} U(z) \\
-&= \frac{5000}{1 - z^{-1}} + 200(-z)(-\frac{1}{z^2(1 -z^{^-1})^2}) \\
-&= 5000(1 - z^{-1})^{-1} + 200\frac{z}{(z - 1)^2} \\
-X(z) &= \frac{5000z}{z - 1} + \frac{200z}{(z - 1)^2} \forall |z| > 1
+X(z) &= \frac{5000z}{z - 1} + \frac{200z}{(z - 1)^2} \quad \forall \quad |z| > 1
 \end{align}
-
 \end{enumerate}
 \end{document}
