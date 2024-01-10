@@ -14,8 +14,5 @@ plt.stem(n, x)
 plt.xlabel("n")
 plt.ylabel("x(n)")
 
-# Title
-plt.title("$x(n) = 5000 + 200n$")
-
 # Save x(n) vs n graph
 plt.savefig("../figs/10_5_2_19.png")

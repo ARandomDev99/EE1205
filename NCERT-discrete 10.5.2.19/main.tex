@@ -89,25 +89,35 @@ The series is an arithmetic progression.
 \begin{align}
 x(n) = (x(0) + nd)(u(n))
 \end{align}
-as $x(n) = 0 \quad \forall \quad n < 0$.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\columnwidth]{figs/10_5_2_19.png}
-    \caption{Plot of $x(n)$ vs $n$; Refer to \tabref{tab:1} for values of $x(0)$ and $d$}
+    \caption{Plot of $x(n)$ vs $n$. See \tabref{tab:1} for details.}
     \label{fig:1}
 \end{figure}
 \item Z-transform of $x(n)$ \\
 Let Z-transform of $x(n)$ be $X(z)$. Let $U(z)$ be the Z-transform of $u(n)$.
 \begin{align}
-X(z) &= \sum_{n = -\infty}^{\infty} (x(0) + nd)(u(n))(z^{-n}) \\
-&= (x(0))(U(z)) + d\sum_{n = 0}^{\infty}nz^{-n} \\
-&= (x(0))(U(z)) + d(\frac{z^{-1}}{(1 - z^{-1})^2}) \\
-&= (x(0))(U(z)) + d(\frac{z}{(z - 1)^2}) \\
-&= \frac{x(0)(z)}{z - 1} + \frac{dz}{(z - 1)^2} \quad \forall \quad |z| > 1
+U(z) &= \frac{1}{1 - z^{-1}} \quad \forall \quad |z| > 1
+\end{align}
+\begin{align}
+\frac{d}{dz}U(z) &= \frac{d}{dz}(\sum_{n =  -\infty}^{\infty} u(n)z^{-n}) \\
+&= \sum_{n = -\infty}^{\infty} u(n)\frac{d}{dz}z^{-n} \\
+&= \sum_{n = -\infty}^{\infty} u(n)(-n)z^{-n - 1} \\
+&= -z^{-1}\sum_{n = -\infty}^{\infty} nu(n)z^{-n} \\
+&= -z^{-1} Z\{nu(n)\}
+\end{align}
+\begin{align}
+\implies Z\{nu(n)\} &= -z\frac{d}{dz}U(z) \\
+&= \frac{z^{-1}}{(1 - z^{-1})^2} \quad \forall \quad |z| > 1
+\end{align}
+\begin{align}
+X(z) &= x(0)U(z) + dZ\{nu(n)\} \\
+&= \frac{x(0)}{1 - z^{-1}} + \frac{dz^{-1}}{(1 - z^{-1})^2} \quad \forall \quad |z| > 1
 \end{align}
 Using the values from \tabref{tab:1}:
 \begin{align}
-X(z) &= \frac{5000z}{z - 1} + \frac{200z}{(z - 1)^2} \quad \forall \quad |z| > 1
+X(z) &= \frac{5000}{1 - z^{-1}} + \frac{200z^{-1}}{(1 - z^{-1})^2} \quad \forall \quad |z| > 1
 \end{align}
 \end{enumerate}
 \end{document}
