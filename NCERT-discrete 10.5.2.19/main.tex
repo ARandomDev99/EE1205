@@ -83,9 +83,6 @@ From the values given in \tabref{tab:1}:
 \implies 2000 &= (n - 1)(200) \\
 \therefore n &= 11
 \end{align}
-\begin{enumerate}
-\item Finding $x(n)$ \\
-The series is an arithmetic progression.
 \begin{align}
 x(n) = (x(0) + nd)(u(n))
 \end{align}
@@ -94,23 +91,8 @@ x(n) = (x(0) + nd)(u(n))
     \includegraphics[width=\columnwidth]{figs/10_5_2_19.png}
     \caption{Plot of $x(n)$ vs $n$. See \tabref{tab:1} for details.}
     \label{fig:1}
-\end{figure}
-\item Z-transform of $x(n)$ \\
+\end{figure} \\
 Let Z-transform of $x(n)$ be $X(z)$. Let $U(z)$ be the Z-transform of $u(n)$.
-\begin{align}
-U(z) &= \frac{1}{1 - z^{-1}} \quad \forall \quad |z| > 1
-\end{align}
-\begin{align}
-\frac{d}{dz}U(z) &= \frac{d}{dz}(\sum_{n =  -\infty}^{\infty} u(n)z^{-n}) \\
-&= \sum_{n = -\infty}^{\infty} u(n)\frac{d}{dz}z^{-n} \\
-&= \sum_{n = -\infty}^{\infty} u(n)(-n)z^{-n - 1} \\
-&= -z^{-1}\sum_{n = -\infty}^{\infty} nu(n)z^{-n} \\
-&= -z^{-1} Z\{nu(n)\}
-\end{align}
-\begin{align}
-\implies Z\{nu(n)\} &= -z\frac{d}{dz}U(z) \\
-&= \frac{z^{-1}}{(1 - z^{-1})^2} \quad \forall \quad |z| > 1
-\end{align}
 \begin{align}
 X(z) &= x(0)U(z) + dZ\{nu(n)\} \\
 &= \frac{x(0)}{1 - z^{-1}} + \frac{dz^{-1}}{(1 - z^{-1})^2} \quad \forall \quad |z| > 1
@@ -119,5 +101,4 @@ Using the values from \tabref{tab:1}:
 \begin{align}
 X(z) &= \frac{5000}{1 - z^{-1}} + \frac{200z^{-1}}{(1 - z^{-1})^2} \quad \forall \quad |z| > 1
 \end{align}
-\end{enumerate}
 \end{document}
