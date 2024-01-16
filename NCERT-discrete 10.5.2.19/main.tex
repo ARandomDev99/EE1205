@@ -56,32 +56,16 @@
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 %fi
-
 \vspace{3cm}
 \textbf{Question 10.5.2.19:} Subba Rao started work in 1995 at an annual salary of Rs. 5000 and received an increment of Rs. 200 each year. In which year did his income reach Rs. 7000?
-\\
+
 \solution
-\begin{table}[h!]
-    \centering
-    \caption{Input Parameters}
-    \label{tab:1}
-    \begin{tabular}{ | c | c | c | }
-        \hline
-        Parameter & Value & Description \\
-        \hline
-        $x(0)$ & 5000 & Initial Income \\
-        \hline
-        $d$ & 200 & Annual Increment (Common Difference) \\
-        \hline
-        $x(n)$ & $x(0) + nd$ & $n^{th}$ term of the AP \\
-        \hline
-    \end{tabular}
-\end{table} \\
+\input{tables/parameters.tex} 
 From the values given in \tabref{tab:1}:
 \begin{align}
-7000 &= 5000 + (n - 1)(200) \\
-\implies 2000 &= (n - 1)(200) \\
-\therefore n &= 11
+7000 &= 5000 + 200n \\
+\implies 2000 &= 200n \\
+\therefore n &= 10
 \end{align}
 \begin{align}
 x(n) = (x(0) + nd)(u(n))
@@ -91,14 +75,13 @@ x(n) = (x(0) + nd)(u(n))
     \includegraphics[width=\columnwidth]{figs/10_5_2_19.png}
     \caption{Plot of $x(n)$ vs $n$. See \tabref{tab:1} for details.}
     \label{fig:1}
-\end{figure} \\
+\end{figure}
 Let Z-transform of $x(n)$ be $X(z)$. Let $U(z)$ be the Z-transform of $u(n)$.
 \begin{align}
-X(z) &= x(0)U(z) + dZ\{nu(n)\} \\
-&= \frac{x(0)}{1 - z^{-1}} + \frac{dz^{-1}}{(1 - z^{-1})^2} \quad \forall \quad |z| > 1
+X(z) &= \frac{x(0)}{1 - z^{-1}} + \frac{dz^{-1}}{(1 - z^{-1})^2} \quad |z| > 1
 \end{align}
 Using the values from \tabref{tab:1}:
 \begin{align}
-X(z) &= \frac{5000}{1 - z^{-1}} + \frac{200z^{-1}}{(1 - z^{-1})^2} \quad \forall \quad |z| > 1
+X(z) &= \frac{5000}{1 - z^{-1}} + \frac{200z^{-1}}{(1 - z^{-1})^2} \quad |z| > 1
 \end{align}
 \end{document}
