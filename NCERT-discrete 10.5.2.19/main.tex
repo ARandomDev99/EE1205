@@ -60,15 +60,12 @@
 \textbf{Question 10.5.2.19:} Subba Rao started work in 1995 at an annual salary of Rs. 5000 and received an increment of Rs. 200 each year. In which year did his income reach Rs. 7000?
 
 \solution
-\input{tables/parameters.tex} 
+\input{tables/parameters.tex} \\
 From the values given in \tabref{tab:1}:
 \begin{align}
 7000 &= 5000 + 200n \\
 \implies 2000 &= 200n \\
 \therefore n &= 10
-\end{align}
-\begin{align}
-x(n) = (x(0) + nd)(u(n))
 \end{align}
 \begin{figure}[h!]
     \centering
@@ -76,7 +73,7 @@ x(n) = (x(0) + nd)(u(n))
     \caption{Plot of $x(n)$ vs $n$. See \tabref{tab:1} for details.}
     \label{fig:1}
 \end{figure}
-Let Z-transform of $x(n)$ be $X(z)$. Let $U(z)$ be the Z-transform of $u(n)$.
+Let Z-transform of $x(n)$ be $X(z)$.
 \begin{align}
 X(z) &= \frac{x(0)}{1 - z^{-1}} + \frac{dz^{-1}}{(1 - z^{-1})^2} \quad |z| > 1
 \end{align}
