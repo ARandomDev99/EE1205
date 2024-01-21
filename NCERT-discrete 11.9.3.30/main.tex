@@ -62,12 +62,17 @@
 \\
 \solution
 
-\input{tables/parameters}
-From the values given in \tabref{tab:1}:
+\begin{table}[h!]
+    \centering
+    \caption{Input Parameters}
+    \label{tab:1}
+    \input{tables/parameters.tex}
+\end{table}
+From \tabref{tab:1}:
 \begin{align}
 x(2) &= 30(2^2) = 120 \\
 x(4) &= 30(2^4) = 480 \\
-x(n) &= 30(2^n)
+x(n) &= 30(2^n)u(n)
 \end{align}
 \begin{figure}[h!]
     \centering
@@ -75,8 +80,7 @@ x(n) &= 30(2^n)
     \caption{Plot of $x(n)$ vs $n$. See \tabref{tab:1} for details.}
     \label{fig:1}
 \end{figure}
-Let Z-transform of $x(n)$ be $X(z)$.
 \begin{align}
-X(z) = \frac{30z^{-1}}{1 - 2z^{-1}} \quad |z| > 2
+X(z) = \frac{30z^{-1}}{1 - 2z^{-1}} \quad \abs{z} > 2
 \end{align}
 \end{document}
