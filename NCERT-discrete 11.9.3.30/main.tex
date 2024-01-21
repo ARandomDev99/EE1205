@@ -77,22 +77,6 @@ x(n) &= 30(2^n)
 \end{figure}
 Let Z-transform of $x(n)$ be $X(z)$.
 \begin{align}
-X(z) &= \sum_{n = -\infty}^{\infty} x(n)u(n)z^{-n} \\
-X(z) &= \sum_{n = 0}^{\infty} x(0)(r^n)(z^{-n}) \\
-X(z) &= x(0)\lim_{n\to\infty}\sum_{i = 0}^{n}(\frac{r}{z})^i
-\end{align}
-\begin{enumerate}
-\item If $|z| > r$:
-\begin{align}
-X(z) &= \frac{30}{1 - \frac{2}{z}} \\
-X(z) &= \frac{30z}{z - 2}
-\end{align}
-\item If $|z| \le r$:
-\begin{align}
-X(z) \to \infty
-\end{align}
-\end{enumerate}
-\begin{align}
-\implies X(z) = \frac{30z}{z - 2} \quad |z| > 2
+X(z) = \frac{30z^{-1}}{1 - 2z^{-1}} \quad |z| > 2
 \end{align}
 \end{document}
