@@ -1,11 +1,18 @@
-import numpy
 import matplotlib.pyplot as plt
+import numpy as np
 
 # X-axis
-n = numpy.linspace(0, 7, 8)
+n = np.array([])
 
 # Y-axis
-x = 30 * (2 ** n)
+x = np.array([])
+
+# Load data from output of C program
+with open("11_9_3_30cout.txt") as file:
+    for line in file.readlines():
+        split_line = line.split(" = ")
+        n = np.append(n, int(split_line[0][2:-1]))
+        x = np.append(x, int(split_line[1]))
 
 # Plot graph
 plt.stem(n, x)
@@ -18,8 +25,5 @@ plt.annotate("480", (4, 480), ha="center", va="bottom", xytext=(0, 10), textcoor
 # Label axes
 plt.xlabel("n")
 plt.ylabel("x(n)")
-
-# Title
-plt.title("$x(n) = 30(2^n)$")
 
 plt.savefig("../figs/11_9_3_30.png")
