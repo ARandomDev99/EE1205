@@ -1,5 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
+
+// Maximum length of allocated strings
+#define MAX_STRING_LENGTH 128
+
+// Number of terms to compute
+#define NUMBER_OF_TERMS 8
+
+const int FIRST_TERM = 30;
+
+const int COMMON_RATIO = 2;
 
 // Function that calculates x(n) = (30 * 2^n)u(n)
 unsigned long long x(int n) {
@@ -8,7 +19,7 @@ unsigned long long x(int n) {
         return 0;
     }
     // 2^n can be represented as a left bitshift by n bits.
-    return 30 * (1ull << n);
+    return FIRST_TERM * pow(COMMON_RATIO, n);
 }
 
 int main() {
@@ -17,10 +28,10 @@ int main() {
     // Open the file.
     fopen_s(&out, "11_9_3_30cout.txt", "w");
     // Character pointer to store the formatted string.
-    char* formatted_str = (char*) malloc(sizeof(char) * 128);
-    for (int i = 0; i < 8; i++) {
+    char* formatted_str = (char*) malloc(sizeof(char) * MAX_STRING_LENGTH);
+    for (int i = 0; i < NUMBER_OF_TERMS; i++) {
         // Format the string.
-        sprintf(formatted_str, "x(%d) = %llu\n", i, x(i));
+        sprintf(formatted_str, "%llu ", x(i));
         // Write the formatted string to the file.
         fputs(formatted_str, out);
     }
