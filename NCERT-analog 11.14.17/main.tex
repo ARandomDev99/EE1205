@@ -62,12 +62,23 @@
 \\
 \solution
 \\
-\[a_{centripetal} = \frac{v^2}{R}\]
-\[F_{centrifugal} = \frac{Mv^2}{R}\]
-\[\implies a_{centrifugal} = \frac{v^2}{R}\]
+\begin{table}
+    \centering
+    \caption{Parameters}
+    \label{tab:1}
+    \input{tables/parameters.tex}
+\end{table}
+
+\begin{align}
+a_{centripetal} &= \frac{v^2}{R} \\
+F_{centrifugal} &= \frac{Mv^2}{R} \\
+\implies a_{centrifugal} &= \frac{v^2}{R}
+\end{align}
 Time period of a simple pendulum $T$ is given by:
-\[T = 2\pi\sqrt{\frac{l}{g_{effective}}}\]
-\[T = 2\pi\sqrt{\frac{l}{\sqrt{g^2 + a_{centrifugal}^2}}}\]
-\[T = 2\pi\sqrt{\frac{lR}{\sqrt{g^2R^2 + v^4}}}\]
+\begin{align}
+T &= 2\pi\sqrt{\frac{l}{g_{e}}} \\
+&= 2\pi\sqrt{\frac{l}{\sqrt{g^2 + a_{centrifugal}^2}}} \\
+&= 2\pi\sqrt{\frac{lR}{\sqrt{g^2R^2 + v^4}}}
+\end{align}
 Therefore, the time period of the pendulum is $2\pi\sqrt{\frac{lR}{\sqrt{g^2R^2 + v^4}}}$ seconds.
 \end{document}
