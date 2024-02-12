@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.3)  12 FEB 2024 10:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.3)  12 FEB 2024 17:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1273,13 +1273,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30293 strings out of 474175
- 592823 string characters out of 5749699
- 1943460 words of memory out of 5000000
+ 30291 strings out of 474175
+ 592799 string characters out of 5749699
+ 1940460 words of memory out of 5000000
  51920 multiletter control sequences out of 15000+600000
  637616 words of font info for 210 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,17n,103p,1172b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,16n,103p,1172b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/texlive/
 2023/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/texlive/2023/texmf-dist
 /fonts/type1/public/txfonts/rtxsc.pfb><c:/texlive/2023/texmf-dist/fonts/type1/p
@@ -1288,10 +1288,10 @@ xsy.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texliv
 e/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/
 fonts/type1/urw/times/utmri8a.pfb>
 Output written on "C:/Users/anisu/Music/EE1205/NCERT-analog 11.14.17/main.pdf" 
-(1 page, 51527 bytes).
+(1 page, 47943 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
+ 64 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
