@@ -8,8 +8,8 @@
     \draw (4,3) to[R, l=\SI{10}{\kohm}, i=$i_2$] (8,3);
     \draw (0,3) to[battery1, v=\SI{10}{\volt}, american] (0,0);
     \draw (4,3) to[R, l=\SI{7}{\kohm}, i=$i_1$] (4,0);
-    \draw (8,3) to[C, l=\SI{10}{\micro\farad}, v=$V_c$, american] (8,0);
-    \draw (0,0)--(8,0);
+    \draw (8,3) to[C, l=$\frac{1}{Cs}$, v=$v_c$, american] (8,0);
+    \draw (0,0) to (8,0);
 \end{circuitikz}
 \end{document}
 
