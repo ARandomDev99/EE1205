@@ -67,40 +67,24 @@ What is the steady state voltage (in Volts) across the capacitor when the switch
 \\
 \solution
 \\
-In steady state, no current flows through capacitor.
-\begin{align}
-i_2 &= 0 \\
-\implies i &= i_1 \\
-v_c &= \brak{7\text{k}\ohm}\brak{i_1} \\
-10\text{V} &= \brak{10\text{k}\ohm}{i_1} \\
-\implies i_1 &= 1\text{mA} \\
-v_c &= 7\text{V}
-\end{align}
 In s-domain:
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\columnwidth]{figs/c_fig2.pdf}
 \end{figure}
 \begin{align}
-(7\text{k}\ohm)i_1 &= 10\text{V} - (3\text{k}\ohm)i \\
-(10\text{k}\ohm)i_1 &= 10\text{V} - (3\text{k}\ohm)i_2 \\
-\implies i_1 &= \frac{10\text{V} - (3\text{k}\ohm)i_2}{10\text{k}\ohm} \\
-&= 1\text{mA} - 0.3i_2\\
-(7\text{k}\ohm)i_1 &= (10\text{k}\ohm)i_2 + v_c \\
-7\text{V} - (2.1\text{k}\ohm)i_2 &= (10\text{k}\ohm)i_2 + v_c \\
-\implies v_c + 12100i_2 &= 7
+i(s) &= \frac{\frac{10}{s}\text{V}}{3\text{k}\ohm + \frac{(7\text{k}\ohm)(10\text{k}\ohm + \frac{1}{sC})}{17\text{k}\ohm + \frac{1}{sC}}} \\
+i_2(s) &= \frac{7\text{k}\ohm}{17\text{k}\ohm + \frac{1}{sC}}i(s) \\
+%&= \frac{\frac{70000}{s}}{121 * 10^6 + \frac{10000}{sC}} \\
+%&= \frac{\frac{7}{s}}{121 * 10^2 + \frac{1}{sC}} \\
+&= \frac{7 * 10^{-5}}{0.121s + 1} \\
+V_c(s) &= i_2(s)\frac{1}{sC} \\
+&= \frac{7}{s(0.121s + 1)} \\
+&= 7\brak{\frac{\frac{1}{0.121}}{s(s + \frac{1}{0.121})}} \\
+&= 7\brak{\frac{1}{s} - \frac{1}{s + \frac{1}{0.121}}}
 \end{align}
-where $i_2 = C\frac{dv_c}{dt}$.
+Taking inverse Laplace transform:
 \begin{align}
-\implies v_c + 12100C\frac{dv_c}{dt} &= 7 \\
-v_c + 0.121\frac{dv_c}{dt} &= 7 \\
-\frac{dv_c}{dt} + \frac{v_c}{0.121} &= \frac{7}{0.121} \\
-v_ce^{\frac{t}{0.121}} &= \frac{7}{0.121}\int{e^{\frac{t}{0.121}}dt} \\
-v_ce^{\frac{t}{0.121}} &= \frac{7}{0.121}\brak{0.121e^{\frac{t}{0.121}} + c}
-\end{align}
-where $c$ is the integration constant.
-Since $v_c = 0$, $c = -0.121$.
-\begin{align}
-v_c &= 7(1 - e^{-\frac{t}{0.121}})
+v_c(t) &= 7u(t)\brak{1 - e^{-\frac{t}{-0.121}}}
 \end{align}
 \end{document}
