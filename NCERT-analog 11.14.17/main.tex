@@ -58,7 +58,7 @@
 %fi
 
 \vspace{3cm}
-\textbf{Question 11.14.17:} A simple pendulum of length $l$ and having a bob of mass $M$ is suspended in a car. The car is moving in a circular track of radius $R$ with a uniform speed $v$. If the pendulum makes small oscillations in a radial direction about its equilibrium position, what will be its time period?
+\textbf{Question 11.14.17:} A simple pendulum of length $\ell$ and having a bob of mass $M$ is suspended in a car. The car is moving in a circular track of radius $R$ with a uniform speed $v$. If the pendulum makes small oscillations in a radial direction about its equilibrium position, what will be its time period?
 \\
 \solution
 \\
@@ -68,15 +68,29 @@
     \label{tab:1}
     \input{tables/parameters.tex}
 \end{table}
+\begin{figure}[h!]
+\centering
+\includegraphics{figs/fbd.pdf}
+\caption{Free Body Diagram}
+\label{fig:1}
+\end{figure}
 
+From the figure, restoring force:
 \begin{align}
-a_c &= \frac{v^2}{R}
+F_r &= -\brak{\sqrt{\brak{\frac{Mv^2}{R}}^2+\brak{Mg}^2}}\sin{\theta\brak{t}}
 \end{align}
-Time period of a simple pendulum $T$ is given by:
+For small oscillations, $\theta\brak{t} << 1$.
 \begin{align}
-T &= 2\pi\sqrt{\frac{l}{g_{e}}} \\
-&= 2\pi\sqrt{\frac{l}{\sqrt{g^2 + a_c^2}}} \\
-\implies T &= 2\pi\sqrt{\frac{lR}{\sqrt{g^2R^2 + v^4}}}
+\implies \sin{\theta\brak{t}} &\approx \theta\brak{t} \\
+\implies F_r &\approx -\brak{\sqrt{\brak{\frac{Mv^2}{R}}^2+\brak{Mg}^2}}\theta\brak{t} \\
+\implies a &= -\brak{\sqrt{\brak{\frac{v^2}{R}}^2+g^2}}\theta\brak{t} \\
+l\frac{d^2\theta\brak{t}}{dt^2} &= -\brak{\sqrt{\brak{\frac{v^2}{R}}^2+g^2}}\theta\brak{t} \\
+\frac{d^2\theta\brak{t}}{dt^2} &= \frac{-1}{\ell}\brak{\sqrt{\brak{\frac{v^2}{R}}^2+g^2}}\theta\brak{t} \\
 \end{align}
-Therefore, the time period of the pendulum is $2\pi\sqrt{\frac{lR}{\sqrt{g^2R^2 + v^4}}}$ seconds.
+
+Taking Laplace transform:
+\begin{align}
+s^2\theta\brak{s} &= \frac{-1}{\ell}\brak{\sqrt{\brak{\frac{v^2}{R}}^2+g^2}}\theta\brak{s} \\
+\end{align}
+
 \end{document}
