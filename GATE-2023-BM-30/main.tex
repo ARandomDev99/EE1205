@@ -67,7 +67,8 @@ What is the steady state voltage (in Volts) across the capacitor when the switch
 \\
 \solution
 \\
-In s-domain:
+\begin{enumerate}
+\item In s-domain:
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\columnwidth]{figs/c_fig2.pdf}
@@ -87,6 +88,43 @@ V_c\brak{s} &= I_2\brak{s}\frac{1}{sC} \\
 \end{align}
 Taking inverse Laplace transform:
 \begin{align}
-v_c\brak{t} &= 7u\brak{t}\brak{1 - e^{-\frac{t}{-0.121}}}
+V_c\brak{t} &= 7u\brak{t}\brak{1 - e^{-\frac{t}{-0.121}}}
 \end{align}
+
+\item For $t > 0$:
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\columnwidth]{figs/c_fig3.pdf}
+\end{figure}
+\begin{align}
+(7\text{k}\ohm)I_1 &= 10\text{V} - (3\text{k}\ohm)I \\
+(10\text{k}\ohm)I_1 &= 10\text{V} - (3\text{k}\ohm)I_2 \\
+\implies I_1 &= \frac{10\text{V} - (3\text{k}\ohm)I_2}{10\text{k}\ohm} \\
+&= 1\text{mA} - 0.3I_2\\
+(7\text{k}\ohm)I_1 &= (10\text{k}\ohm)I_2 + V_c \\
+7\text{V} - (2.1\text{k}\ohm)I_2 &= (10\text{k}\ohm)I_2 + V_c \\
+\implies V_c + 12100I_2 &= 7 \\
+I_2 &= \brak{10\mu\text{F}}\frac{dV_c}{dt} \\
+\implies V_c + 0.121\frac{dV_c}{dt} &= 7 \\
+\frac{dV_c}{dt} + \frac{V_c}{0.121} &= \frac{7}{0.121} \\
+V_c &= 7\brak{1 + \frac{c}{0.121}e^{-\frac{t}{0.121}}}
+\end{align}
+where $c$ is the integration constant.
+Since $V_c = 0$, $c = -0.121$.
+\begin{align}
+V_c &= 7(1 - e^{-\frac{t}{0.121}})
+\end{align}
+\end{enumerate}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\columnwidth]{figs/plot.png}
+%\caption{$V_c$ vs $t$}
+\label{fig:2023BM30}
+\end{figure}
+In steady state,
+\begin{align}
+t &\to \infty \\
+V_c &= 7\text{V}
+\end{align}
+
 \end{document}
