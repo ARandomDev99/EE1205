@@ -9,13 +9,13 @@ double v_c(double t) {
 
 int main () {
     // Generate x-axis.
-    double* t = linspace(0, 1, 200);
+    double* t = linspace(0, 1, 201);
 
     // Open file.
     FILE* out;
     fopen_s(&out, "gate23bm30cout.txt", "w");
 
-    for (size_t i = 0; i < 200; i++) {
+    for (size_t i = 0; i < 201; i++) {
         // Write v_c(t) to output file.
         fprintf(out, "%lf ", v_c(t[i]));
     }
