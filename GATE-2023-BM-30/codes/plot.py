@@ -2,15 +2,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # X-axis
-t = np.linspace(-.2, 1, 200)
+t = np.linspace(0, 1, 200)
 
 # Y-axis
-# V_c = 7u(t)(1 - e^(-t / 0.121))
-V_c = 7 * np.heaviside(t, 1) * (1 - np.exp(-t / .121))
+V_c = np.loadtxt("gate23bm30cout.txt")
 
 plt.plot(t, V_c)
 
-plt.xlabel("Time ($s$)")
+plt.xlabel("Time ($t$)")
 plt.ylabel("Voltage ($V_c$)")
 
 plt.savefig("plot.png")
