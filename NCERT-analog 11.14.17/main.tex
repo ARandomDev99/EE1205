@@ -72,7 +72,7 @@
 \centering
 \includegraphics{figs/fbd.pdf}
 \caption{Free Body Diagram}
-\label{fig:1}
+\label{fig:analog_11_14_17_1}
 \end{figure}
 
 From the figure, restoring force:
@@ -85,12 +85,43 @@ For small oscillations, $\theta\brak{t} << 1$.
 \implies F_r &\approx -\brak{\sqrt{\brak{\frac{Mv^2}{R}}^2+\brak{Mg}^2}}\theta\brak{t} \\
 \implies a &= -\brak{\sqrt{\brak{\frac{v^2}{R}}^2+g^2}}\theta\brak{t} \\
 l\frac{d^2\theta\brak{t}}{dt^2} &= -\brak{\sqrt{\brak{\frac{v^2}{R}}^2+g^2}}\theta\brak{t} \\
-\frac{d^2\theta\brak{t}}{dt^2} &= \frac{-1}{\ell}\brak{\sqrt{\brak{\frac{v^2}{R}}^2+g^2}}\theta\brak{t} \\
+\text{Let } k &= \frac{1}{\ell}\brak{\sqrt{\brak{\frac{v^2}{R}}^2+g^2}} \\
+\frac{d^2\theta\brak{t}}{dt^2} + k\theta\brak{t} &= 0 \\
 \end{align}
-
 Taking Laplace transform:
 \begin{align}
-s^2\Theta\brak{s} - s\theta(0) - \theta'(0) &= \frac{-1}{\ell}\brak{\sqrt{\brak{\frac{v^2}{R}}^2+g^2}}\Theta\brak{s}
+s^2\Theta\brak{s} - s\theta(0) - \theta'(0) + k\Theta\brak{s} &= 0
 \end{align}
-
+Assuming $\theta(0) = 0$:
+\begin{align}
+s^2\Theta\brak{s} - \theta'(0) + k\Theta\brak{s} &= 0 \\
+\implies \Theta\brak{s} &= \frac{\theta'(0)}{s^2 + k}
+\end{align}
+Taking inverse laplace transform using Bromwich integral:
+\begin{align}
+\theta(t) &= \frac{1}{2\pi j}\int_{c-j\infty}^{c+j\infty}\Theta(s)e^{st}dt, c > 0 \\
+&= \frac{1}{2\pi j}\int_{c-j\infty}^{c+j\infty}\frac{\theta'(0)e^{st}}{s^2 + k}dt
+\end{align}
+Since the poles $s=j\sqrt{k}$ and $s=-j\sqrt{k}$ (both non repeated, i.e. $m=1$) lie inside a semicircle for some $c>0$. Using Jordans lemma and method of residues from \ref{table:ee25-tab3}:
+\begin{align}
+R_1&=\lim\limits_{s\to j\sqrt{k}}\brak {{\brak{s-j\sqrt{k}}}\brak{\frac{\theta'(0)}{s^2+k}} e^{st}}\\
+&={\brak{\frac{\theta'(0)e^{j\sqrt{k}t}}{2j\sqrt{k}}}}\\
+R_2&=\lim\limits_{s\to -j\sqrt{k}}\brak {{\brak{s+j\sqrt{k}}}\brak{\frac{\theta'(0)}{s^2+k}} e^{st}}\\
+&={\brak{\frac{-\theta'(0)e^{-j\sqrt{k}t}}{2j\sqrt{k}}}}\\
+\theta(t) &= R_1 + R_2\\
+\theta(t) &= {\brak{\frac{\theta'(0)\brak{e^{j\sqrt{k}t}-e^{-j\sqrt{k}t}}}{2j\sqrt{k}}}}\\
+\implies
+\theta(t) &=\frac{\theta'(0)}{\sqrt{k}}\sin{\brak{\sqrt{k}t}} \\
+\implies \theta(t) &= \frac{\theta'(0)}{\sqrt{\frac{1}{\ell}\brak{\sqrt{\brak{\frac{v^2}{R}}^2+g^2}}}}\sin{\brak{\sqrt{\frac{1}{\ell}\brak{\sqrt{\brak{\frac{v^2}{R}}^2+g^2}}}t}}
+\end{align}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\columnwidth]{figs/plot.png}
+\caption{$\theta\brak{t}$ vs $t$ for $v = 1, R = 1, \ell = 1, g = 9.8, \theta'\brak{0} = 1$}
+\label{fig:analog_11_14_17_2}
+\end{figure}
+\begin{align}
+\frac{2\pi}{T} &= \sqrt{\frac{1}{\ell}\brak{\sqrt{\brak{\frac{v^2}{R}}^2+g^2}}} \\
+\implies T &= 2\pi\sqrt{\frac{\ell}{\sqrt{\brak{\frac{v^2}{R}}^2+g^2}}}
+\end{align}
 \end{document}
