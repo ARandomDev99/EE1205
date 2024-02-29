@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.22)  29 FEB 2024 13:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.22)  29 FEB 2024 16:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1254,11 +1254,14 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 
 (c:/texlive/2023/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
-) [1{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2
-023/texmf-dist/fonts/enc/dvips/base/8r.enc}
+)
+(C:/Users/anisu/Music/EE1205/GATE-2021-EC-23/tables/parameters.tex) [1{c:/texli
+ve/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/texmf-dis
+t/fonts/enc/dvips/base/8r.enc}
 
 
-] (C:/Users/anisu/Music/EE1205/GATE-2021-EC-23/main.aux)
+]
+(C:/Users/anisu/Music/EE1205/GATE-2021-EC-23/main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1267,26 +1270,27 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30219 strings out of 474137
- 591146 string characters out of 5748517
- 1951190 words of memory out of 5000000
- 51893 multiletter control sequences out of 15000+600000
- 625312 words of font info for 181 fonts, out of 8000000 for 9000
+ 30266 strings out of 474137
+ 591930 string characters out of 5748517
+ 1957190 words of memory out of 5000000
+ 51924 multiletter control sequences out of 15000+600000
+ 637854 words of font info for 211 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,11n,103p,1172b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,13n,103p,1172b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb><c:/texlive/2
 023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/texlive/2023/texmf-dist
 /fonts/type1/public/txfonts/rtxr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pu
-blic/txfonts/txex.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/tx
-sy.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsya.pfb><c:/tex
-live/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-di
-st/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw
-/times/utmri8a.pfb>
+blic/txfonts/rtxsc.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/t
+xex.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><c:/tex
+live/2023/texmf-dist/fonts/type1/public/txfonts/txsya.pfb><c:/texlive/2023/texm
+f-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1
+/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a
+.pfb>
 Output written on C:/Users/anisu/Music/EE1205/GATE-2021-EC-23/main.pdf (1 page,
- 53944 bytes).
+ 58360 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
+ 88 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
