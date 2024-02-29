@@ -72,15 +72,14 @@
 \end{table}
 
 The signal is band limited to 4 kHz.
-Let the bandwidth of the signal be $B_0$.
 \begin{align}
 B_0 &= 4\text{kHz} \\
-\text{Nyquist Rate } R_N &= 2B_0 \\
+%R_N &= 2B_0 \\
 \implies R_N &= 8\text{kHz} \\
-\text{Sampling Frequency } f_s &= 1.25R_N \\
+%f_s &= 1.25R_N \\
 \implies f_s &= 10\text{kHz} \\
-\text{Data Rate } R &= nf_s \\
-&= \brak{8}\brak{10\text{kHz}} \\
+%R &= nf_s \\
+R &= \brak{8}\brak{10\text{kHz}} \\
 \implies R &= \brak{8}\brak{10^4}\text{ bits/second}
 \end{align}
 Channel capacity for an Additive White Gaussian Noise channel is
@@ -88,9 +87,8 @@ Channel capacity for an Additive White Gaussian Noise channel is
 C = B\log_2{\brak{1 + \frac{P}{N}}}\text{ bits/second}
 \end{align}
 where $P$ is the maximum channel power and $N$ is the noise power and $B$ is the channel bandwidth.
-Given, signal power to channel noise power is 26 dB.
 \begin{align}
-\implies 10\log_{10}{\frac{P}{N}} &= 26\text{dB} \\
+10\log_{10}{\frac{P}{N}} &= 26\text{dB} \\
 \implies \frac{P}{N} &= 10^{2.6} \\
 &\approx 398.107
 \end{align}
