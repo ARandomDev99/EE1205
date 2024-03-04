@@ -68,6 +68,13 @@ The steady state error with respect to a unit ramp input is \rule{1cm}{0.15mm} .
 \\
 \solution
 \\
+\begin{figure}[h!]
+\centering
+\includegraphics{figs/block-diagram.pdf}
+\caption{Block Diagram of the System}
+\label{fig:2021bm46-1}
+\end{figure}
+
 \begin{align}
 \frac{C\brak{s}}{R\brak{s}} &= \frac{s + 90}{s^2 + 10s + 90}
 \end{align}
@@ -76,7 +83,7 @@ Given that input is unit ramp function:
 \begin{align}
 r\brak{t} &= tu\brak{t} \\
 \implies R\brak{s} &= \frac{1}{s^2} \\
-\implies C\brak{s} &= \frac{s + 90}{s^2\brak{s^2+10+90}} \\
+\implies C\brak{s} &= \frac{s + 90}{s^2\brak{s^2+10s+90}} \\
 E\brak{s} &= R\brak{s} - C\brak{s} \\
 &= \frac{s^2+9s}{s^2\brak{s^2+10s+90}}
 \end{align}
@@ -86,4 +93,35 @@ Steady state error is:
 &= \frac{1}{10}
 \end{align}
 $\therefore$ steady state error for unit ramp input is 0.1.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\columnwidth]{figs/r_t.png}
+\caption{Plot of $r\brak{t}$ vs $t$}
+\label{fig:2021bm46-2}
+\end{figure}
+\begin{align}
+C\brak{s} &= \frac{s + 90}{s^2\brak{s^2+10s+90}} \\
+&= -\frac{1}{10s} + \frac{1}{s^2} + \frac{s}{10\brak{s^2 + 10s + 90}} \\
+&= -\frac{1}{10s} + \frac{1}{s^2} + \frac{s + 5}{\brak{s+5}^2+65} - \frac{1}{2}\brak{\frac{1}{\brak{s+5}^2+65}}
+\end{align}
+\begin{align}
+c\brak{t} &= u\brak{t}\brak{-\frac{1}{10} + t + \frac{e^{-5t}}{10} \cos{\brak{\sqrt{65}t}} - \frac{e^{-5t}}{2\sqrt{65}}\sin{\brak{\sqrt{65}t}}}
+\end{align}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\columnwidth]{figs/c_t.png}
+\caption{Plot of $c\brak{t}$ vs $t$}
+\label{fig:2021bm46-3}
+\end{figure}
+\begin{align}
+E\brak{s} &= R\brak{s} - C\brak{s} \\
+\implies e\brak{t} &= r\brak{t} - c\brak{t} \\
+&= u\brak{t}\brak{\frac{1}{10} - \frac{e^{-5t}}{10} \cos{\brak{\sqrt{65}t}} + \frac{e^{-5t}}{2\sqrt{65}}\sin{\brak{\sqrt{65}t}}}
+\end{align}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\columnwidth]{figs/e_t.png}
+\caption{Plot of $e\brak{t}$ vs $t$}
+\label{fig:2021bm46-4}
+\end{figure}
 \end{document}
