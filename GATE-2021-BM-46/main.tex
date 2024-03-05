@@ -70,7 +70,7 @@ The steady state error with respect to a unit ramp input is \rule{1cm}{0.15mm} .
 \\
 \begin{figure}[h!]
 \centering
-\includegraphics{figs/block-diagram.pdf}
+\includegraphics[width=\columnwidth]{figs/block-diagram.pdf}
 \caption{Block Diagram of the System}
 \label{fig:2021bm46-1}
 \end{figure}
@@ -124,4 +124,8 @@ E\brak{s} &= R\brak{s} - C\brak{s} \\
 \caption{Plot of $e\brak{t}$ vs $t$}
 \label{fig:2021bm46-4}
 \end{figure}
+\begin{align}
+\text{Feedback Gain } &= \frac{\frac{C\brak{s}}{R\brak{s}}}{1 + \frac{C\brak{s}}{R\brak{s}}} \\
+&= \frac{s + 90}{s^2 + 11s + 180}
+\end{align}
 \end{document}
